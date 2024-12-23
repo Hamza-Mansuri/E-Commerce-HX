@@ -1,0 +1,337 @@
+-> imported things in app.jsx
+
+-> imported Route, RouterProvider, createRoutesFromElements
+-> createBrowserRouter
+
+-> made Navigation compomnent, in that we created SideBar with Various Links
+
+apiSlice:-
+-> then we have created apiSlice, and created baseQuery
+
+usersApiSlice:-
+-> then we have to set the endpoint in usersApiSlice, for /auth/
+
+=> Configure the Store.
+- reducer with apiSlice
+- add middleware and concat it
+- set devtool true
+- and dispatch the store
+
+=> create authSlice
+- set initialstate
+- setCredential, set the userInfo in state, set the expirationTime
+- logout set to null, and clear() the storage.
+
+Code Explanation in im.
+
+
+Login.jsx
+-> created the login page
+
+-> from there register routing will be started
+
+-> we have toggled the dropdown in navigation.jsx
+- if we have userInfo show profile and logout
+- if isAdmin show many more dropdowns
+
+Register.jsx
+-> same structure as Login.jsx
+- we need to make builder for that in usersApiSlice
+
+========================== 2:58:00 completed Login and Register
+
+from here user Profile section starts
+
+*=> Profile
+
+-> create an endpoint in usersApiSlice
+
+-> created PrivateRoute
+-> and Profile.jsx
+
+==============3:17:00
+
+=> ADMIN ROUTES
+
+= Created AdminRoutes.jsx
+= Created UserList.jsx
+
+*=> Created Message.jsx
+
+=> Api's Created in usersApiSlice.jsx
+->useGetUsersQuery, useDeleteUserMutation, useGetUserDetailsQuery, useUpdateUserMutation
+-> it is implemented in UserList.jsx, except, getUserDetailsQuery.
+
+*=> Craeated UserList.jsx
+
+-> worked on displaying Id, Name, Email.
+-> created Whole Tabel for Admin.
+
+-> deleteHandler
+-> toggleEdit
+-> updateHandler
+
+=========================== End of the Video
+
+30:00
+Frontend Part of Category
+
+1- categoryApiSlice.js
+2- CategoryForm.jsx under component
+3- CategoryList.jsx
+
+-> rendered all categories
+-> take input of category
+
+4- Modal.jsx under component
+
+-> handleCreateCategory
+-> handleUpdateCategory
+-> handleDeleteCategory
+
+======================== End Of the Video
+
+59:00
+
+=> start frontend of products and images
+
+1- productApiSlice.js
+-> created all ROUTES-> it is compulsory that number of routes we created in backend it must be included in frontend.
+
+2- ProductList.jsx
+
+-> rendering all of out context related to creating the products
+
+================ 1:42:00 End of the Adding the Product
+
+1- ProductUpdate.jsx
+
+================== 1:50:00
+
+*=> Creating Admin Menu
+
+1- AdminMenu.jsx
+
+=> leaved Updating the product for a short time.
+
+============ 1:60:00
+
+*=> creating AllProduct.jsx
+
+completed
+
+=========== 2:10:00
+
+UpdateProduct.jsx
+
+jsx part is same as ProductList(creating the product)
+
+=========== End Of the Video
+
+Start of the new Video
+
+*=> Created Header.jsx(component)
+
+inside pages-> Products folder
+
+inside src-> Home.jsx
+
+*=> Created
+=> SmallProduct.jsx
+=> ProductCarousel.jsx
+
+-> used in Header, and rendered in Home.jsx
+
+*=> Created
+=> Product.jsx
+
+*=> Created
+=> fovoriteSlice.js inside features-> fovoriteSlice
+
+-> need Practice to Learn
+
+-> addFavourites
+-> removeFavorites
+-> setFavprites
+
+*=> Created
+=> localStorage.js in Utils
+
+-> Study the keyword concept
+
+================== 49:00
+
+Store Configuration
+
+import favoriteReducer to store
+
+import getFavoriteFromLocalStorage
+
+//register the favorites to store
+
+//also we have to preload the state of favorites
+
+*=> Created HeartIcon.jsx
+
+-> does the functionality of isFavorites or Not
+
+-> HeartIcon is Rendered in Product Component
+
+*=> Creating FavoritesCount.jsx (in Product)
+
+-> in the Navigation Section
+
+===============================1:05:00
+
+creating Favorites.jsx (Component)
+
+-> created Route for Favorites
+
+=====================
+
+Now We have to Handle Specific product
+
+-> suppose we click on the specific product, it should open that product
+
+*=> Created ProductDetails.jsx (in Product)
+
+*=> Created Raitngs.jsx
+
+-> for rendering the rating in ProductDetails.jsx
+
+-> math logic, and conditional tailwind.
+
+*=> Created ProductTabs.jsx (in Product)
+
+-> for rendering the ProductTabs.jsx in ProductDetails.jsx
+
+-> created 3 sections in productTabs
+
+============================= End Of teh Video
+
+New Video starts
+
+Filtering functionality
+
+*=> Created cartSlice (in features-> cart)
+
+Methods
+->  addToCart,
+->  removeFromCart,
+->  saveShippingAddress,
+->  savePaymentMethod,
+->  clearCartItems,
+->  resetCart,
+
+*=> Created cart.js (in Utils)
+
+-> using updateCart Method in our cartSlice
+
+=> Using cartSlice in Store.js
+
+-> registered the cart in store'
+
+*=> Created Cart.jsx (in pages)
+
+-> Added the functionality of adding the count of Cart in Navigation
+
+=========================== 37:20
+
+Shop section
+*=> Created shopSlice.js (shop Folder in Features)
+
+-> registered the shopSlice in the store
+
+*=> Shop.jsx (inside the pages folder)
+
+*=> creating useGetFilteredProducts (in the backend as well as in frontend)
+
+-> filter-produuct Route on productRoutes.js
+-> method in productController.js (done some logic in that- of checked and radio)
+
+-> useGetFilteredProductsQuery Route in productApiSlice, (in FrontEnd)
+
+-> used this routing in Shop.jsx
+
+-> starts the work in Shop.jsx (understand the logic of useEffect)
+
+*=> Filtering process done in Shop.jsx (injsx part)
+
+*=> Created ProductCard.jsx (inside the product)
+-> to render all the products according to the categories, brands and price
+
+=======================  End Of The Video
+
+Orders & Payments
+
+started at 44:40
+
+*=> Added Paypal Client Id in .env File
+
+*=> Added Route in index.js in backend
+
+*=> Added URL's in constants.js (Order_url, Paypal_url)
+
+*=> Created orderApiSlice.js (in redux/api)
+-> created all api of backend
+
+=> Now when we click Proceed To CheckOut, it will go to /shipping, we need to take care of that.
+
+*=> Created Orders Folder in pages
+*=> Shipping.jsx (inside the Orders)
+
+*=> Underneath PrivateRoutes & profile Route, we need to make Route of Shipping
+
+*=> Created ProgressSteps.jsx (inside the component)
+
+-> After Providing the shipping details in Shipping.jsx
+
+*=> Created PlaceOrder.jsx (inside the Orders Folder)
+
+
+================= 1:35:20
+
+*=> Wrap the entire Application in PaypalScriptProvider (in main.jsx)
+
+-> Now we need to take care of Specific orderApiSlice
+
+*=> Created Order.jsx (inside the Order Folder)
+
+-> Implemented all the methods related to Paypal
+
+============== 2:01:30
+
+starting admin Deliver section
+
+============== 2:06:50
+
+-> now we are taking care of Specific User Orders.
+-> When user go to his profile and when he clicks on MyOrders.
+
+*=> Created UserOrder.jsx (inside the User Folder)
+
+
+================== 2:20:50
+
+-> Now we are going to take care of all of the orders as ADMIN
+
+-> in the ADMIN dropdown in Navigation, there is Order.
+
+*=> Created OrderList.jsx (in the Admin Folder)
+
+======================= End Of the Video
+
+Admin DashBoard
+
+*=> Created AdminDashboard.jsx (in Admin Folder)
+
+
+
+==================================================================
+Orders:- 
+
+William-
+http://localhost:5173/order/6761441be332cef4b82dcd6b
+
+Alex-
+http://localhost:5173/order/6761482578f51a43878701c8

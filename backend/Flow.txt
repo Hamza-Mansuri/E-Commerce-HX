@@ -1,0 +1,88 @@
+-> make changes in the package.json
+
+-> config = db.js (connect to the database)
+-> .env
+
+-> index.js = import all packages and utilities and set the setup
+
+====
+
+1- creating the schema and model in userModel.js
+
+2- creating routes in userRoutes (in that post method is used (createUser) => that comes from userController)
+
+-> import user , create (asyncHandler)
+
+3- User Related Services
+
+1= creating user in userController
+
+-> (createToken) in the MiddleWarre
+
+2- login User
+
+-> created (authMiddleware) to Verify the token to login
+
+3- getAllUsers
+
+4- getCurrentUserprofile
+
+5- updateCurrentUserProfile
+
+// ADMIN SIDE AUTHORITIES
+
+1- deleteUserById
+
+2- getUserById
+
+3- updateUserById
+
+// Till here user related servides are over in the backend
+// Helping Files
+
+1- (asyncHandler)
+2- (createToken) 
+3- (authMiddleware)
+
+====================================== 1:18:00
+
+The Category Management Video
+
+-> First create a route in index.js, and create categoryRoutes.js File, categoryController.js , categoryModel.js
+
+=> Created All catogory Routes, and created methods n categoryController.
+
+======================30:00 finished backend category part.
+
+
+CRUD Operation of the Product
+
+1- create ProductModal.js (const ObjectId = mongoose.Schema) //remember
+-> first created reviewSchema
+-> add Route in index.js
+
+2- created productRoutes.js
+
+3- checkId.js
+-> For checking the ID
+
+4- productController.js
+-> created all methods related to product
+
+5- uploadRoutes.js
+-> handled the images
+-> created all methods in uploadRoutes.js and index.js
+
+
+======================== 59:00 end of the backend of Product and Uploading the image.
+
+Orders & Payments
+
+*=> Created orderModel.js (in Model)
+
+*=> Created orderRoutes.js
+
+*=> Created orderController.js
+
+
+======================  44:40 End of the Backend of Order and Payment Method
